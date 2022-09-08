@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="https://icono-49d6.kxcdn.com/icono.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <script src="js/player.js" type="module" defer></script>
+    <title>momentum</title>
+</head>
+<body>
+    <header class="header">
+        <div class="player">
+            <div class="player-controls">
+                <button class="play-prev player-icon"></button>
+                <button class="play player-icon"></button>
+                <button class="play-next player-icon"></button>
+            </div>
+            <p class="title-track"></p>
+            <input type="range" min="0" max="" value="0" id="progress-bar" />
+            <div class="controls">
+                <div class="time-song">
+                    <div class="current">0:00</div>
+                    <div class="divider">/</div>
+                    <div class="length">0:00</div>
+                </div>
+                <div class="volume-container">
+                    <div class="volume-button">
+                        <div class="volume icono-volumeMedium"></div>
+                    </div>
+                    <input type="range" id="volume-slider" step=".01" min="0" max="1" value=".75" />
+                </div>
+            </div>
+            <ul class="play-list"></ul>
+        </div>
+        <div class="todo-container">
+            <span class="todo-button">Todo</span>
+            <div class="todo-menu">
+                <select class="todo-menu-combobox">
+                    <option value="today"></option>
+                    <option value="done"></option>
+                </select>
+                <div class="todo-list">
+                    <span class="span-no-todo"></span>
+                </div>
+                <div class="new-todo-input">
+                    <input type="text" name="new-todo" class="new-todo" value="" placeholder="New Todo" />
+                </div>
+            </div>
+        </div>
+        <div class="weather">
+            <input type="text" class="city" value="Минск" />
+            <div class="weather-container">
+                <i class="weather-icon owf"></i>
+                <div class="description">
+                    <div class="description-container">
+                        <span class="temperature"></span>
+                        <span class="weather-description"></span>
+                    </div>
+                    <div class="wind"></div>
+                    <div class="humidity"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="slider-icons">
+            <button class="slide-prev slider-icon"></button>
+            <button class="slide-next slider-icon"></button>
+        </div>
+        <time class="time"></time>
+        <date class="date"></date>
+        <div class="greeting-container">
+            <span class="greeting"></span>
+            <input type="text" class="name" placeholder="[ Введите имя ]" />
+        </div>
+        <div class="menu-container">
+            <div class="close-menu">
+                <span class="close-menu-line"></span>
+                <span class="close-menu-line"></span>
+            </div>
+            <div class="settings-title">
+                Настройки
+            </div>
+            <div class="menu-item">
+                <p class="time-title">Время</p>
+                <label class="switch">
+                    <input class="time-switch" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <p class="date-title">Дата</p>
+                <label class="switch">
+                    <input class="date-switch" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <p class="greeting-title">Приветствие</p>
+                <label class="switch">
+                    <input class="greeting-switch" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <p class="quotes-title">Цитата</p>
+                <label class="switch">
+                    <input class="quotes-switch" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <p class="weather-title">Прогноз погоды</p>
+                <label class="switch">
+                    <input class="weather-switch" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <p class="audio-title">Аудиоплеер</p>
+                <label class="switch">
+                    <input class="audio-switch" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="menu-item">
+                <p class="todo-title">Список дел</p>
+                <label class="switch">
+                    <input class="todo-switch" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="menu-item bg-item">
+                <div class="bg-container">
+                    <p class="bg-title">Фон</p>
+                    <select class="bg">
+                        <option value="github">GitHub</option>
+                        <option value="unsplash">Unsplash API</option>
+                        <option value="flickr">Flickr API</option>
+                    </select>
+                </div>
+                <div class="tagAPI">
+                    <span class="tagAPI-title">Тег/теги</span>
+                    <input type="text" value="" id="tags" />
+                </div>
+            </div>
+            <div class="menu-item">
+                <p class="language-title">Язык</p>
+                <select class="language">
+                    <option value="ru">Рус</option>
+                    <option value="en">Eng</option>
+                </select>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <button class="change-quote"></button>
+        <div class="quote-container">
+            <div class="quote"></div>
+            <div class="author"></div>
+        </div>
+        <div class="last-line">
+            <div class="settings">
+                <div class="icono-sliders"></div>
+            </div>
+            <div class="copyright">
+                <ul>
+                    <li>2022&#169;</li>
+                    <li><a href="https://rs.school/js/" target="_blank"><img class="rsschool" src="assets/svg/rs_school_js.svg" alt="RSSchool" /></a></li>
+                    <li><a href="https://github.com/DeFranS325" target="_blank"><img class="github" src="assets/svg/github.svg" alt="GitHub" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
